@@ -1,0 +1,17 @@
+{
+  "name": "course-registration-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SOFT411 assignment: modern testing strategy and prototype for a small course registration system",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node node_modules/@playwright/test/cli.js test",
+    "test:api": "node node_modules/@playwright/test/cli.js test tests/api",
+    "test:ui": "node node_modules/@playwright/test/cli.js test tests/ui",
+    "report": "node node_modules/@playwright/test/cli.js show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0"
+  }
+}

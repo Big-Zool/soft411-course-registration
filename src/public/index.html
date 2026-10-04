@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Course Registration</h1>
+
+    <form id="lookup-form">
+      <label for="student-id">Student ID</label>
+      <div class="row">
+        <input id="student-id" name="studentId" placeholder="S100001" autocomplete="off" required>
+        <button type="submit">Load schedule</button>
+      </div>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">My schedule</h2>
+      <p id="credits">No student loaded.</p>
+      <ul id="schedule"></ul>
+    </section>
+
+    <section aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Courses</h2>
+      <table>
+        <caption class="visually-hidden">Available courses</caption>
+        <thead>
+          <tr><th scope="col">Code</th><th scope="col">Title</th><th scope="col">Credits</th><th scope="col">Requires</th><th scope="col">Seats</th><th scope="col"><span class="visually-hidden">Action</span></th></tr>
+        </thead>
+        <tbody id="courses"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
